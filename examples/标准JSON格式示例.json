@@ -1,0 +1,17 @@
+{
+  "conversation": {
+    "title": "我和张三",
+    "self": "我",
+    "peer": "张三"
+  },
+  "messages": [
+    { "time": "2026-09-20 21:30:15", "sender": "张三", "type": "text", "content": "你好，最近怎么样" },
+    { "time": "2026-09-20 21:30:40", "sender": "我", "type": "text", "content": "还不错，你呢？" },
+    { "time": "2026-09-20 21:31:02", "sender": "张三", "type": "text", "content": "也挺好的。周末有没有空？想约你一起去爬山" },
+    { "time": "2026-09-20 21:31:30", "sender": "我", "type": "text", "content": "周末可以呀！周六还是周日？" },
+    { "time": "2026-09-20 21:32:00", "sender": "张三", "type": "image", "content": "", "file": "media/2026-09-20_213200.jpg" },
+    { "time": "2026-09-20 21:32:15", "sender": "张三", "type": "text", "content": "就这里，风景特别好" },
+    { "time": "2026-09-20 21:32:40", "sender": "我", "type": "sticker", "content": "", "file": "media/2026-09-20_213240.gif" },
+    { "time": "2026-09-20 21:33:20", "sender": "我", "type": "text", "content": "那就周六早上出发吧 😄" }
+  ]
+}

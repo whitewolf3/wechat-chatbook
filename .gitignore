@@ -1,0 +1,25 @@
+node_modules/
+out/
+dist/
+.smoke-build/
+.migrate-build/
+.test-build/
+.validation-*
+
+# LLM 配置（含 API Key，严禁入库；模板见 .env.example）
+.env
+
+*.log
+.DS_Store
+
+# 开发过程的一次性验证/迁移脚本（本地保留，不入库）
+/check-db.js
+/extract-facts.js
+/migrate-fix-media.js
+/migrate-fix-v2.js
+/reanalyze-fixed.js
+/test-export.js
+/test-llm-fix.js
+/test-media-protocol.js
+/test-media.js
+/test-parse.js

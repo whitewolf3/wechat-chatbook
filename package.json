@@ -1,0 +1,52 @@
+{
+  "name": "wechat-chatbook",
+  "productName": "ChatBook",
+  "version": "0.1.0",
+  "description": "个人微信聊天记录整理与导出工具（本地离线处理，不触碰微信客户端）",
+  "main": "out/main/index.js",
+  "author": "ChatBook",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "start": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "smoke": "tsc src/shared/types.ts src/main/parsers/types.ts src/main/parsers/datetime.ts src/main/parsers/common.ts src/main/parsers/structured-txt-parser.ts src/main/parsers/wechat-copy-parser.ts src/main/parsers/json-parser.ts src/main/parsers/csv-parser.ts src/main/parsers/html-parser.ts src/main/parsers/registry.ts src/main/db/database.ts --outDir .smoke-build --module commonjs --target es2022 --moduleResolution node --esModuleInterop --skipLibCheck && ELECTRON_RUN_AS_NODE=1 electron scripts/smoke-test.js",
+    "dist": "electron-vite build && electron-builder --mac",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "@tanstack/react-virtual": "^3.14.13",
+    "better-sqlite3": "^12.2.0",
+    "dotenv": "^18.0.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.3",
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "electron-vite": "^2.3.0",
+    "typescript": "^5.6.3"
+  },
+  "build": {
+    "appId": "com.chatbook.app",
+    "productName": "ChatBook",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "out/**"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    }
+  }
+}
